@@ -1,0 +1,26 @@
+.Introduction {
+    position: relative;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.Introduction .background {
+    width: 100%;
+}
+
+.Introduction .text-wrapper {
+    position: absolute;
+
+    top: 4%;
+    right: 8%;
+    left: 8%;
+
+    font-size: 3.6vw;
+    line-height: 4.2vw;
+}
+
+.Introduction .text {
+    white-space: pre-line;
+}

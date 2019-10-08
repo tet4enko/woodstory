@@ -1,0 +1,83 @@
+.Examples {
+    position: relative;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.Examples .background {
+    width: 100%;
+}
+
+.Examples .slider-wrapper {
+    position: absolute;
+    top: 20%;
+    right: 17%;
+    left: 14%;
+}
+
+.Examples .sp-button {
+    border: 2px solid #597a00;
+}
+
+.Examples .sp-selected-button,
+.Examples .sp-next-arrow::after,
+.Examples .sp-next-arrow::before,
+.Examples .sp-previous-arrow::after,
+.Examples .sp-previous-arrow::before {
+    background-color: #597a00;
+}
+
+.Examples .sp-full-screen-button::before {
+    color: #597a00;
+}
+
+.Examples .slider-pro:not(.sp-full-screen).sp-horizontal .sp-previous-arrow {
+    left: -40px;
+}
+
+.Examples .slider-pro:not(.sp-full-screen).sp-horizontal .sp-next-arrow {
+    right: -40px;
+}
+
+.Examples .sp-slides-container {
+    box-shadow: 0 0 14px -2px #7bb000;
+}
+
+@media screen and (max-width: 1000px) {
+    .Examples .slider-pro:not(.sp-full-screen).sp-horizontal .sp-previous-arrow {
+        left: 20px;
+    }
+
+    .Examples .slider-pro:not(.sp-full-screen).sp-horizontal .sp-next-arrow {
+        right: 20px;
+    }
+
+    .Examples .slider-wrapper {
+        right: 0;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .Examples .background {
+        display: none;
+    }
+
+    .Examples .slider-wrapper {
+        position: relative;
+        top: initial;
+        right: initial;
+        left: initial;
+    }
+
+    .Examples .sp-arrow,
+    .Examples .sp-full-screen-button {
+        display: none;
+    }
+
+    .Examples .sp-slides-container {
+        box-shadow: none;
+    }
+}

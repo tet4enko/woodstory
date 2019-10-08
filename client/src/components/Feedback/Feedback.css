@@ -1,0 +1,111 @@
+.Feedback {
+    position: relative;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.Feedback .background {
+    width: 100%;
+}
+
+.Feedback .content-wrapper {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    left: 10%;
+}
+
+.Feedback .comment {
+    margin-bottom: 20px;
+
+    text-align: left;
+
+    font-size: 2vw;
+}
+
+.Feedback .top-line .avatar {
+    width: 8vw;
+    height: 8vw;
+}
+
+.Feedback .description {
+    width: 40vw;
+    margin-top: 15px;
+}
+
+.Feedback .comment.right .description,
+.Feedback .comment.right .top-line .avatar {
+    margin-left: auto;
+}
+
+.Feedback .top-line {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+}
+
+.Feedback .name {
+    margin-left: 20px;
+
+    font-size: 3vw;
+}
+
+.Feedback .show-secondary {
+    display: none;
+
+    padding: 20px 20px;
+
+    font-size: 6vw;
+}
+
+@media screen and (max-width: 850px) {
+    .Feedback .background {
+        display: none;
+    }
+
+    .Feedback .content-wrapper {
+        position: relative;
+        top: initial;
+        right: initial;
+        left: initial;
+    }
+
+    .Feedback .comment {
+        margin: 0 4vw 4vw 4vw;
+
+        font-size: 5vw;
+    }
+
+    .Feedback .comment .name {
+        font-size: 7vw;
+    }
+
+    .Feedback .top-line .avatar {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .Feedback .description {
+        width: 100%;
+    }
+
+    .Feedback .comment.right .description,
+    .Feedback .comment.right .top-line .avatar {
+        margin-left: initial;
+    }
+
+    .Feedback:not(.more) .secondary {
+        display: none;
+    }
+
+    .Feedback:not(.more) .show-secondary {
+        display: inline-block;
+    }
+
+    .Feedback:not(.more) .comment:first-child {
+        margin: 0 4vw;
+    }
+}
