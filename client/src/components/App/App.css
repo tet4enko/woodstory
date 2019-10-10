@@ -29,6 +29,18 @@ body {
     color: #7bb000;
 }
 
+.App .block {
+    position: relative;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.App .block .background {
+    width: 100%;
+}
+
 @media screen and (max-width: 850px) {
     .App .header {
         margin-bottom: 20px;

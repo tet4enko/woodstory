@@ -4,7 +4,7 @@ import background from './introduction_background.png';
 
 function Header() {
     return (
-        <div className="Introduction">
+        <div className="Introduction block">
             <img className="background" src={background} />
             <div className="text-wrapper">
                 <div className="header">О нас</div>

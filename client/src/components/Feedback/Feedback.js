@@ -35,7 +35,7 @@ class Feedback extends React.Component {
         };
     
         return (
-            <div className={`Feedback ${this.state.more ? 'more' : ''}`}>
+            <div className={`Feedback block ${this.state.more ? 'more' : ''}`}>
                 <img className="background" src={background} />
                 <div className="content-wrapper">
                     <div className="header">Отзывы</div>

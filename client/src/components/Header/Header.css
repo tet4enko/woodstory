@@ -1,15 +1,3 @@
-.Header {
-    position: relative;
-
-    width: 100%;
-
-    text-align: center;
-}
-
-.Header .background {
-    width: 100%;
-}
-
 .Header .menu-wrapper {
     text-align: center;
 }

@@ -1,18 +1,7 @@
-.Price {
-    position: relative;
-
-    width: 100%;
-
-    text-align: center;
-}
-
-.Price .background,
-.Price .background2 {
-    width: 100%;
-}
-
 .Price .background2 {
     display: none;
+
+    width: 100%;
 }
 
 .Price .content-wrapper {

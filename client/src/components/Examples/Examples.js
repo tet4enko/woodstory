@@ -34,7 +34,7 @@ class Examples extends React.Component {
 
     render() {
         return (
-            <div className="Examples">
+            <div className="Examples block">
                 <img className="background" src={background} />
                 <div className="slider-wrapper">
                     <div className="header">Наши работы</div>

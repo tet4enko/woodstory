@@ -68,7 +68,7 @@ class Price extends Component {
 
     render() {
         return (
-            <div className="Price">
+            <div className="Price block">
             <img className="background" src={background} />
             <img className="background2" src={background2} />
             <div className="content-wrapper">

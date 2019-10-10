@@ -8,7 +8,7 @@ function Header() {
     };
 
     return (
-        <header className="Header">
+        <header className="Header block">
             <img className="background" src={background} />
             <div className="menu-wrapper">
                 <ol className="menu">

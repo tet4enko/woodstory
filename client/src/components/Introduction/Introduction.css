@@ -1,15 +1,3 @@
-.Introduction {
-    position: relative;
-
-    width: 100%;
-
-    text-align: center;
-}
-
-.Introduction .background {
-    width: 100%;
-}
-
 .Introduction .text-wrapper {
     position: absolute;
 

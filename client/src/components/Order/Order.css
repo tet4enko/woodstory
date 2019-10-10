@@ -1,17 +1,3 @@
-.Order {
-    position: relative;
-
-    width: 100%;
-}
-
-.Order .background {
-    width: 100%;
-}
-
-.Order .header {
-    text-align: center;
-}
-
 .Order .content-wrapper {
     position: absolute;
     top: 0;

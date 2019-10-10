@@ -70,7 +70,7 @@ class Order extends Component {
 
     render() {
         return (
-            <div className={`Order ${this.state.submited ? 'submited' : ''}`}>
+            <div className={`Order block ${this.state.submited ? 'submited' : ''}`}>
             <img className="background" src={background} />
             <div className="content-wrapper">
                 <div className="header">Заказать</div>

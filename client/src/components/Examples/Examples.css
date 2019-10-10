@@ -1,15 +1,3 @@
-.Examples {
-    position: relative;
-
-    width: 100%;
-
-    text-align: center;
-}
-
-.Examples .background {
-    width: 100%;
-}
-
 .Examples .slider-wrapper {
     position: absolute;
     top: 20%;
