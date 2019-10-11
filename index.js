@@ -29,7 +29,7 @@ app
         const send = gmail({
             user: 'woodstorysender',
             pass: 'woodstorysender228',
-            to:   ['tavrida.media@mail.ru', 'tetchenko@gmail.com'],
+            to:   ['tavrida.media@mail.ru', 'trissenkov@gmail.com'],
             subject: 'Заказ с woodstory.ru',
         });
 

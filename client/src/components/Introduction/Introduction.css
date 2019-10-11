@@ -1,14 +1,81 @@
-.Introduction .text-wrapper {
+.Introduction .content-wrapper {
     position: absolute;
 
-    top: 4%;
-    right: 8%;
-    left: 8%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
 
-    font-size: 3.6vw;
-    line-height: 4.2vw;
+.Introduction .header {
+    position: absolute;
+    top: 15%;
+    right: 0;
+    left: 0;
+
+    margin: auto;
+}
+
+.Introduction .content {
+    position: absolute;
+    top: 42%;
+    right: 4vw;
+    left: 4vw;
+
+    display: flex;
+}
+
+.Introduction .balar {
+    width: 32vw;
 }
 
 .Introduction .text {
-    white-space: pre-line;
+    display: block;
+
+    margin-left: 5vw;
+
+    text-align: left;
+}
+
+@media screen and (max-width: 850px) {
+    .Introduction .background {
+        display: none;
+    }
+
+    .Introduction .content-wrapper {
+        position: relative;
+        top: initial;
+        right: initial;
+        bottom: initial;
+        left: initial;
+    }
+
+    .Introduction .header {
+        position: relative;
+
+        top: 4%;
+
+        margin-bottom: 3vw;
+    }
+
+    .Introduction .content {
+        position: relative;
+
+        top: initial;
+        right: initial;
+        left: initial;
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Introduction .content .text {
+        font-size: 7vw;
+    }
+
+    .Introduction .balar {
+        width: 90vw;
+
+        margin-bottom: 3vw;
+    }
 }

@@ -106,4 +106,8 @@
     .Order .invalid-feedback {
         font-size: 3vw;
     }
+
+    .Order .submit-success-message {
+        font-size: 6vw;
+    }
 }

@@ -26,10 +26,10 @@ class Feedback extends React.Component {
     render() {
         const comment = (name, age, text, pic, side, href) => {
             return <div className={`comment ${side}`}>
-                <a className="top-line" href={href} target="_blank">
+                <div className="top-line" href={href} target="_blank">
                     <img className="avatar" src={pic} />
                     <div className="name green">{`${name}, ${age}`}</div>
-                </a>
+                </div>
                 <div className="description">{text}</div>
             </div>;
         };
