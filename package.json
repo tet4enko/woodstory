@@ -25,5 +25,16 @@
     "express": "^4.17.1",
     "express-pino-logger": "^4.0.0",
     "gmail-send": "^1.8.10"
+  },
+  "devDependencies": {
+    "cz-customizable": "^6.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "config/git/commitizen.js"
+    }
   }
 }
