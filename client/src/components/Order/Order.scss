@@ -1,0 +1,120 @@
+.Order {
+    .content-wrapper {
+        position: absolute;
+        top: 0;
+        right: 10%;
+        bottom: 0;
+        left: 10%;
+    }
+
+    .form {
+        width: 40vw;
+        margin: 0 auto;
+
+        font-size: 2.4vw;
+
+        input,
+        textarea {
+            font-size: 1.8vw;
+
+            &:focus {
+                border-color: rgba(93, 120, 72, .3);
+                box-shadow: 0 0 0 .2rem rgba(93, 120, 72, .3);
+            }
+        }
+
+        .col-sm-10 {
+            margin: 0 auto;
+        }
+
+        .invalid-feedback {
+            text-align: left;
+        }
+
+        .btn {
+            display: block;
+
+            margin: 0 auto;
+
+            border-color: #7bb000;
+            background-color: #7bb000;
+
+            font-size: 3vw;
+
+            &:hover,
+            &:active {
+                border-color: #007834;
+                background-color: #007834;
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 .2rem rgba(93, 120, 72, .3);
+            }
+        }
+    }
+
+    &.submited .form {
+        display: none;
+    }
+
+    .submit-success-message {
+        position: relative;
+        top: 25%;
+
+        display: none;
+
+        margin-bottom: 50px;
+
+        text-align: center;
+
+        font-size: 4vw;
+    }
+
+    &.submited .submit-success-message {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .Order .content-wrapper {
+        top: 4%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .Order {
+        .background {
+            display: none;
+        }
+
+        .content-wrapper {
+            position: relative;
+            top: initial;
+            right: initial;
+            bottom: initial;
+            left: initial;
+        }
+
+        .form {
+            width: 90vw;
+            margin-bottom: 50px;
+
+            input,
+            textarea {
+                font-size: 4.5vw;
+            }
+
+            .btn {
+                font-size: 6vw;
+            }
+        }
+
+        .invalid-feedback {
+            font-size: 5vw;
+        }
+
+        .submit-success-message {
+            font-size: 6vw;
+        }
+    }
+}

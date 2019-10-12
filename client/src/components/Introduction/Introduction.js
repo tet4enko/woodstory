@@ -1,5 +1,5 @@
 import React from 'react';
-import './Introduction.css';
+import './Introduction.scss';
 import background from './introduction_background.png';
 import balar from './balar.png';
 

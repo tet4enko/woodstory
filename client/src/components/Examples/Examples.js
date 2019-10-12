@@ -1,7 +1,7 @@
 /* global $ */
 
 import React from 'react';
-import './Examples.css';
+import './Examples.scss';
 import background from './examples_background.png';
 
 import pic1 from './pics/_M-pyRFtqUw.jpg';

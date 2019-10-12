@@ -1,7 +1,7 @@
 /* global $ */
 
 import React, { Component } from 'react';
-import './Order.css';
+import './Order.scss';
 import background from './order_background.png';
 
 import Form from 'react-bootstrap/Form';

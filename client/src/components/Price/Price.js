@@ -1,7 +1,7 @@
 /* global $ */
 
 import React, { Component } from 'react';
-import './Price.css';
+import './Price.scss';
 import background from './price_background.png';
 import background2 from './price_background2.png';
 

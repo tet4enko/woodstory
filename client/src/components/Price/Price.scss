@@ -1,0 +1,128 @@
+.Price {
+    .background2 {
+        display: none;
+
+        width: 100%;
+    }
+
+    .content-wrapper {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        left: 10%;
+    }
+
+    .slider-pro {
+        margin: 0 50px 0 0;
+
+        &:not(.sp-full-screen).sp-horizontal {
+            .sp-previous-arrow {
+                left: -40px;
+            }
+
+            .sp-next-arrow {
+                right: -25px;
+            }
+        }
+
+        .sp-horizontal .sp-arrows {
+            margin-top: -30px;
+        }
+
+        .sp-arrows .sp-fade-arrows {
+            margin-top: 0;
+        }
+    }
+
+    .sp-selected-button,
+    .sp-next-arrow::after,
+    .sp-next-arrow::before,
+    .sp-previous-arrow::after,
+    .sp-previous-arrow::before {
+        background-color: #597a00;
+    }
+
+    .sp-arrow {
+        width: 20px;
+        height: 50px;
+    }
+
+    .slider-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .current-price {
+        position: relative;
+
+        width: 500px;
+        height: 400px;
+    }
+
+    .current-price-img {
+        position: absolute;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        width: 400px;
+
+        margin: auto;
+
+        transition-duration: .35s;
+        transition-property: width;
+
+        &.animate {
+            width: 450px;
+        }
+    }
+
+    .mobile-prices-wrapper {
+        display: none;
+
+        width: 67vw;
+
+        margin: 0 auto;
+
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+
+        .mobile-price {
+            width: 29vw;
+            height: 29vw;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .Price {
+        .slider-wrapper {
+            display: none;
+        }
+
+        .mobile-prices-wrapper {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .Price {
+        .content-wrapper {
+            top: 4%;
+        }
+
+        .background {
+            display: none;
+        }
+
+        .background2 {
+            display: block;
+        }
+    }
+}

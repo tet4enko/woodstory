@@ -1,0 +1,87 @@
+.Introduction {
+    .content-wrapper {
+        position: absolute;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .header {
+        position: absolute;
+        top: 15%;
+        right: 0;
+        left: 0;
+
+        margin: auto;
+    }
+
+    .content {
+        position: absolute;
+        top: 42%;
+        right: 4vw;
+        left: 4vw;
+
+        display: flex;
+    }
+
+    .balar {
+        width: 32vw;
+    }
+
+    .text {
+        display: block;
+
+        margin-left: 5vw;
+
+        text-align: left;
+
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .Introduction {
+        .background {
+            display: none;
+        }
+
+        .content-wrapper {
+            position: relative;
+            top: initial;
+            right: initial;
+            bottom: initial;
+            left: initial;
+        }
+
+        .header {
+            position: relative;
+
+            top: 4%;
+
+            margin-bottom: 3vw;
+        }
+
+        .content {
+            position: relative;
+
+            top: initial;
+            right: initial;
+            left: initial;
+
+            flex-direction: column;
+            align-items: center;
+
+            .text {
+                font-size: 7vw;
+            }
+        }
+
+        .balar {
+            width: 90vw;
+
+            margin-bottom: 3vw;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.Header {
+    .menu-wrapper {
+        text-align: center;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 90%;
+
+        list-style: none;
+
+        .menu-item {
+            display: block;
+
+            width: 140px;
+            height: 80px;
+
+            margin: 0 10px;
+            padding: 0 10px;
+
+            cursor: pointer;
+
+            opacity: .8;
+
+            color: #fff;
+
+            border-radius: 20px;
+
+            background: #007834;
+
+            font-size: 31px;
+
+            line-height: 80px;
+
+            :nth-child(2n) {
+                background: #597a00;
+            }
+
+            :hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 995px) {
+    .Header .menu {
+        bottom: 6%;
+
+        .menu-item {
+            padding: 0;
+
+            color: #007834;
+            background: none;
+
+            font-size: 33px;
+
+            :nth-child(2n) {
+                background: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Header .menu-wrapper {
+        display: none;
+    }
+}

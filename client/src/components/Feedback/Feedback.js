@@ -1,5 +1,5 @@
 import React from 'react';
-import './Feedback.css';
+import './Feedback.scss';
 import background from './feedback_background.png';
 
 import alexandra from './photos/alexandra.png';

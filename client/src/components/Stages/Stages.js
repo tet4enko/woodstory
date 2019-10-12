@@ -1,5 +1,5 @@
 import React from 'react';
-import './Stages.css';
+import './Stages.scss';
 import background from './stages_background.png';
 
 import stage1 from './pics/stage1.png';
@@ -29,7 +29,7 @@ function Stages() {
                     {arrow}
                     {stagePic(stage3, 3, 'Печать', 'Нанесение изображения на поверхность изделия')}
                     {arrow}
-                    {stagePic(stage4, 4, 'Упаковка', 'Упаковка готовое картины в подарочную бумагу ')}
+                    {stagePic(stage4, 4, 'Упаковка', 'Упаковка готовое картины в подарочную бумагу')}
                     {arrow}
                     {stagePic(stage5, 5, 'Доставка', 'Бесплатная доставка по Крыму')}
                 </div>

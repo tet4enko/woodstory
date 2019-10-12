@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.css';
+import './Header.scss';
 import background from './header_background.png';
 
 function Header() {

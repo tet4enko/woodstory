@@ -1,0 +1,52 @@
+@font-face {
+    font-family: gleb-font;
+    src: url('/glebfont.otf') format("opentype");
+}
+
+body {
+    background-color: #c3e2da;
+
+    font-family: gleb-font, sans-serif;
+}
+
+.App {
+    .header {
+        margin-bottom: 40px;
+
+        color: #f22c16;
+
+        font-size: 4.5vw;
+    }
+
+    .red {
+        color: #f22c16;
+    }
+
+    .green {
+        color: #597a00;
+    }
+
+    .lite-green {
+        color: #7bb000;
+    }
+
+    .block {
+        position: relative;
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .block .background {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .App .header {
+        margin-bottom: 20px;
+
+        font-size: 10vw;
+    }
+}
