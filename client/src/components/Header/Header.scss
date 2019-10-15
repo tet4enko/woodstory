@@ -1,14 +1,10 @@
 .Header {
-    .menu-wrapper {
-        text-align: center;
-    }
-
     .menu {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        width: 90%;
+        padding: 0 4vw;
 
         list-style: none;
 
@@ -35,11 +31,11 @@
 
             line-height: 80px;
 
-            :nth-child(2n) {
+            &:nth-child(2n) {
                 background: #597a00;
             }
 
-            :hover {
+            &:hover {
                 opacity: 1;
             }
         }
@@ -58,7 +54,7 @@
 
             font-size: 33px;
 
-            :nth-child(2n) {
+            &:nth-child(2n) {
                 background: none;
             }
         }
@@ -100,6 +96,8 @@
                     padding-left: 2vw;
 
                     color: #fff;
+
+                    border-radius: 0;
 
                     font-size: 16vw;
                     line-height: 21vw;

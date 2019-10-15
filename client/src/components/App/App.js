@@ -14,6 +14,7 @@ import Price from './../Price/Price';
 import Feedback from './../Feedback/Feedback';
 import Order from './../Order/Order';
 import Stages from './../Stages/Stages';
+import Footer from './../Footer/Footer';
 
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -83,6 +84,7 @@ class App extends React.Component {
     }
 
     setTouchMenuShow(value) {
+        console.log('set ' + value);
         this.setState({
             touchMenuShow: value
         });
@@ -118,24 +120,39 @@ class App extends React.Component {
         }
     }
 
+    onMenuItemClick(slug) {
+        this.setState({ touchMenuShow: false });
+
+        setTimeout(() => {
+            let scrollTop = jQuery(`.${slug}`).offset().top;
+
+            if (document.body.clientWidth <= 850) {
+                scrollTop -= this.refs.touchHeader.clientHeight;
+            }
+
+            jQuery('html, body').animate({ scrollTop }, 1000);
+        }, 100);
+    }
+
     render() {
         return (
             <div className={`App ${this.state.touchMenuShow ? 'touch-menu-show' : ''}`}>
-                <div className="touch-header">
-                    <FaBars className="ico" onClick={() => this.toggleTouchMenuShow(true)}/>
+                <div className="touch-header" ref="touchHeader">
+                    <FaBars className="ico" onClick={() => this.toggleTouchMenuShow()}/>
                     <div itemscope itemtype="http://schema.org/LocalBusiness">
                         <div className="schema-name" itemprop="name">Beach Bunny Swimwear</div>
                         <span><a className="phone-link" href="tel:+79780790979 ">(978) 079-09-79</a></span>
                     </div>
                     <FaPhone className="ico" onClick={() => this.setModalShow(true)}/>
                 </div>
-                <Header touchMenuShow={this.state.touchMenuShow}/>
+                <Header onMenuItemClick={this.onMenuItemClick.bind(this)} touchMenuShow={this.state.touchMenuShow}/>
                 <Examples/>
                 <Stages/>
                 <Price/>
                 <Order/>
                 <Introduction/>
                 <Feedback/>
+                <Footer/>
                 <div className="call-great" onClick={() => this.setModalShow(true)}></div>
                 <CallModal disabled={this.state.disabled} validated={this.state.modalValidated} show={this.state.modalShow} onCall={this.call.bind(this)} onHide={() => this.setModalShow(false)}/>
             </div>
