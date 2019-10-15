@@ -10,6 +10,10 @@ body {
 }
 
 .App {
+    .touch-header {
+        display: none;
+    }
+
     .header {
         margin-bottom: 40px;
 
@@ -41,12 +45,173 @@ body {
     .block .background {
         width: 100%;
     }
+
+    .call-great {
+        position: fixed;
+        right: -329px;
+        bottom: 86px;
+
+        width: 400px;
+        height: 135px;
+
+        cursor: pointer;
+
+        transition-timing-function: linear;
+        transition-duration: .3s;
+        transition-property: right;
+
+        background: url('./call_great.png');
+        background-size: cover;
+
+        &:hover {
+            right: 0;
+        }
+
+        &::after {
+            position: absolute;
+            top: 29px;
+            left: 94px;
+
+            content: 'Заказать звонок';
+
+            color: #fff;
+
+            font-size: 53px;
+        }
+    }
+}
+
+.btn.btn-primary {
+    border-color: #7bb000;
+    background-color: #7bb000;
+
+    &:hover,
+    &:not(:disabled):not(.disabled):active {
+        border-color: #007834;
+        background-color: #007834;
+    }
+
+    &:not(:disabled):not(.disabled):focus {
+        box-shadow: 0 0 0 .2rem rgba(93, 120, 72, .3);
+    }
+}
+
+.btn.btn-secondary {
+    color: #007834;
+
+    border-color: #7bb000;
+    background-color: #fff;
+
+    &:hover,
+    &:not(:disabled):not(.disabled):active {
+        color: #007834;
+
+        border-color: #007834;
+        background-color: #fff;
+    }
+
+    &:not(:disabled):not(.disabled):focus {
+        box-shadow: 0 0 0 .2rem rgba(93, 120, 72, .3);
+    }
+}
+
+.form-control {
+    &:focus {
+        border-color: rgba(93, 120, 72, .3);
+        box-shadow: 0 0 0 .2rem rgba(93, 120, 72, .3);
+    }
+}
+
+.modal {
+    .modal-title {
+        color: #7bb000;
+
+        font-size: 3vw;
+    }
+
+    .btn {
+        font-size: 1.5vw;
+    }
+
+    .invalid-feedback {
+        font-size: 1.5vw;
+    }
 }
 
 @media screen and (max-width: 850px) {
-    .App .header {
-        margin-bottom: 20px;
+    .App {
+        padding-top: 15vw;
 
-        font-size: 10vw;
+        .call-great {
+            display: none;
+        }
+
+        .header {
+            margin-bottom: 20px;
+
+            font-size: 10vw;
+        }
+
+        .block {
+            margin-bottom: 5vw;
+        }
+
+        &.touch-menu-show .block:not(.Header) {
+            display: none;
+        }
+
+        .touch-header {
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            right: 0;
+            left: 0;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            height: 15vw;
+
+            color: #fff;
+
+            background: #7bb000;
+
+            .ico {
+                margin: 0 3vw;
+
+                color: #fff;
+
+                font-size: 10vw;
+            }
+
+            .schema-name {
+                display: none;
+            }
+
+            .phone-link {
+                color: #fff;
+
+                font-size: 10vw;
+            }
+        }
+    }
+
+    .modal {
+        .modal-title {
+            font-size: 7vw;
+        }
+
+        .btn {
+            font-size: 5vw;
+        }
+
+        .invalid-feedback {
+            font-size: 5vw;
+        }
+
+        .form-control {
+            font-size: 5vw;
+        }
     }
 }

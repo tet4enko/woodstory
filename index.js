@@ -8,6 +8,12 @@ const pino = require('express-pino-logger')();
 
 const app = express();
 
+const email = {
+    user: 'woodstorysender',
+    pass: 'woodstorysender228',
+    to:   ['tavrida.media@mail.ru', 'trissenkov@gmail.com'],
+};
+
 app
     .use(compression())
     .use(express.static(path.join(__dirname, 'client/build')))
@@ -26,12 +32,9 @@ app
     })
 
     .post('/api/order/', (req, res) => {
-        const send = gmail({
-            user: 'woodstorysender',
-            pass: 'woodstorysender228',
-            to:   ['tavrida.media@mail.ru', 'trissenkov@gmail.com'],
+        const send = gmail(Object.assign({}, email, {
             subject: 'Заказ с woodstory.ru',
-        });
+        }));
 
         send({
             html: `
@@ -40,13 +43,33 @@ app
                 Телефон: ${req.body.phone}<br/>
                 Текст собщение: ${req.body.comment}<br/>
             `,  
-        }, (error, result, fullResult) => {
-            console.log(result);
+        }, (error, result) => {
             if (error) {
                 req.log.error(req.body, 'send order error :(');
                 res.status(500);
             } else {
                 req.log.info(req.body, 'send order success :)');
+            }
+
+            res.end();
+        })
+    })
+
+    .post('/api/call/', (req, res) => {
+        const send = gmail(Object.assign({}, email, {
+            subject: 'Запрос обратного звонка с woodstory.ru',
+        }));
+
+        send({
+            html: `
+                Телефон: ${req.body.phone}<br/>
+            `,  
+        }, (error) => {
+            if (error) {
+                req.log.error(req.body, 'send call error :(');
+                res.status(500);
+            } else {
+                req.log.info(req.body, 'send call success :)');
             }
 
             res.end();

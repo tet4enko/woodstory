@@ -13,16 +13,6 @@
 
         font-size: 2.4vw;
 
-        input,
-        textarea {
-            font-size: 1.8vw;
-
-            &:focus {
-                border-color: rgba(93, 120, 72, .3);
-                box-shadow: 0 0 0 .2rem rgba(93, 120, 72, .3);
-            }
-        }
-
         .col-sm-10 {
             margin: 0 auto;
         }
@@ -36,20 +26,7 @@
 
             margin: 0 auto;
 
-            border-color: #7bb000;
-            background-color: #7bb000;
-
             font-size: 3vw;
-
-            &:hover,
-            &:active {
-                border-color: #007834;
-                background-color: #007834;
-            }
-
-            &:focus {
-                box-shadow: 0 0 0 .2rem rgba(93, 120, 72, .3);
-            }
         }
     }
 
