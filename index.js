@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const gmail = require('gmail-send');
 const pino = require('express-pino-logger')();
 
+const config = require('./modules/config');
+
 const app = express();
 
 const email = {
@@ -80,7 +82,7 @@ app
         res.sendFile(path.join(__dirname, 'client/build/index.html'));
     });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || config.port;
 app.listen(port);
 
 console.log('App is listening on port ' + port);
