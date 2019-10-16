@@ -44,8 +44,8 @@ class Price extends Component {
 
     componentDidMount() {
         $('#price-slider').sliderPro({
-            width: 400,
-            height: 400,
+            width: 370,
+            height: 370,
             buttons: false,
             arrows: true,
             imageScaleMode: 'contain',

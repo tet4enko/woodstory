@@ -12,10 +12,11 @@ function Header() {
         <div className="Footer block">
             <img className="background" src={background} />
             <div className="content-wrapper">
+                <div className="header">Связаться с нами</div>
                 <div className="content">
-                    <a className="phone" target="_blank" href="tel:+79780790979 "><img className="ico" src={phone}/></a>
                     <a className="mail" target="_blank" href="mailto:tavrida.media@mail.ru"><img className="ico" src={mail}/></a>
                     <a className="inst" target="_blank" href="https://www.instagram.com/you.wood.story/"><img className="ico" src={inst}/></a>
+                    <a className="vk" target="_blank" ><img className="ico" src={vk}/></a>
                 </div>
             </div>
         </div>

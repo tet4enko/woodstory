@@ -5,9 +5,13 @@
         width: 100%;
     }
 
+    .header {
+        margin-bottom: 0;
+    }
+
     .content-wrapper {
         position: absolute;
-        top: 10%;
+        top: 3%;
         right: 10%;
         left: 10%;
     }
@@ -101,12 +105,22 @@
 
 @media screen and (max-width: 1000px) {
     .Price {
+        .content-wrapper {
+            right: 3%;
+            left: 3%;
+        }
+
         .slider-wrapper {
             display: none;
         }
 
         .mobile-prices-wrapper {
             display: block;
+
+            .mobile-price {
+                width: 16vw;
+                height: 16vw;
+            }
         }
     }
 }
@@ -115,6 +129,8 @@
     .Price {
         .content-wrapper {
             top: 4%;
+            right: 10%;
+            left: 10%;
         }
 
         .background {
@@ -123,6 +139,13 @@
 
         .background2 {
             display: block;
+        }
+
+        .mobile-prices-wrapper {
+            .mobile-price {
+                width: 29vw;
+                height: 29vw;
+            }
         }
     }
 }

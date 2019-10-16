@@ -10,7 +10,7 @@
 
     .content {
         position: absolute;
-        top: 22%;
+        top: 24%;
         right: 4vw;
         left: 4vw;
 
@@ -29,6 +29,10 @@
 
 @media screen and (max-width: 850px) {
     .Footer {
+        .header {
+            display: none;
+        }
+
         .content {
             top: 16%;
 
