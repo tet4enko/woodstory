@@ -46,7 +46,21 @@ body {
         width: 100%;
     }
 
-    &:not([data-scrolled='yes']) {
+    .go-top {
+        position: fixed;
+        bottom: 123px;
+        left: 0;
+
+        width: 75px;
+        height: 64px;
+
+        cursor: pointer;
+
+        background: url('./go_top.png');
+        background-size: contain;
+    }
+
+    &:not([data-scrolled='true']) {
         .go-top {
             display: none;
         }
@@ -84,20 +98,6 @@ body {
 
             font-size: 53px;
         }
-    }
-
-    .go-top {
-        position: fixed;
-        bottom: 123px;
-        left: 10px;
-
-        width: 75px;
-        height: 75px;
-
-        cursor: pointer;
-
-        background: url('./go_top.png');
-        background-size: cover;
     }
 }
 

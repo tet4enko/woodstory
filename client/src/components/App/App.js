@@ -65,6 +65,35 @@ class CallModal extends React.Component {
 
 class App extends React.Component {
 
+    throttle(func, ms) {
+        let isThrottled = false,
+            savedArgs,
+            savedThis;
+      
+        function wrapper() {
+      
+            if (isThrottled) {
+                savedArgs = arguments;
+                savedThis = this;
+                return;
+            }
+      
+            func.apply(this, arguments);
+      
+            isThrottled = true;
+      
+            setTimeout(function() {
+                isThrottled = false;
+                if (savedArgs) {
+                    wrapper.apply(savedThis, savedArgs);
+                    savedArgs = savedThis = null;
+                }
+            }, ms);
+        }
+      
+        return wrapper;
+      }
+
     constructor(props) {
         super(props);
 
@@ -76,9 +105,10 @@ class App extends React.Component {
             touchMenuShow: false
         };
 
-        jQuery(window.document).one('scroll', () => {
-            this.refs.App.setAttribute('data-scrolled', 'yes')
-        });
+        jQuery(window.document).on('scroll', this.throttle(() => {
+            console.log(1);
+            this.refs.App.setAttribute('data-scrolled', Boolean(window.scrollY))
+        }, 200));
     }
 
     setModalShow(value) {

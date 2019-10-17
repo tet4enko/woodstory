@@ -1,4 +1,8 @@
 .Header {
+    .logos {
+        display: none;
+    }
+
     .menu {
         display: flex;
         justify-content: space-between;
@@ -19,24 +23,22 @@
 
             cursor: pointer;
 
-            opacity: .8;
-
             color: #fff;
 
             border-radius: 20px;
 
             background: #007834;
 
-            font-size: 31px;
+            font-size: 3vw;
 
             line-height: 80px;
 
             &:nth-child(2n) {
-                background: #597a00;
+                background: #7bb000;
             }
 
             &:hover {
-                opacity: 1;
+                opacity: .9;
             }
         }
     }
@@ -79,6 +81,21 @@
 
             background: #7bb000;
 
+            .logos {
+                position: absolute;
+                bottom: 13vw;
+
+                display: flex;
+                justify-content: space-evenly;
+
+                width: 100%;
+
+                .logo {
+                    width: 21vw;
+                    height: 21vw;
+                }
+            }
+
             .menu {
                 flex-direction: column;
                 align-items: flex-start;
@@ -95,14 +112,26 @@
                     margin: 0;
                     padding-left: 2vw;
 
+                    opacity: 1;
+
                     color: #fff;
 
                     border-radius: 0;
 
                     font-size: 16vw;
                     line-height: 21vw;
+
+                    &:hover {
+                        opacity: 1;
+                    }
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 850px) and (orientation: landscape) {
+    .Header .menu-wrapper.touch-show .logos {
+        display: none;
     }
 }

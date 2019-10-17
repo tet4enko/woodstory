@@ -3,7 +3,6 @@
 import React, { Component } from 'react';
 import './Price.scss';
 import background from './price_background.png';
-import background2 from './price_background2.png';
 
 import size1 from './prices/size1.png';
 import size2 from './prices/size2.png';
@@ -70,7 +69,6 @@ class Price extends Component {
         return (
             <div className="Price block">
             <img className="background" src={background} />
-            <img className="background2" src={background2} />
             <div className="content-wrapper">
                 <div className="header">Цены</div>
                 <div className="mobile-prices-wrapper">

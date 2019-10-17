@@ -24,13 +24,13 @@
                 left: -40px;
             }
 
+            .sp-arrows {
+                top: 48%;
+            }
+
             .sp-next-arrow {
                 right: -25px;
             }
-        }
-
-        .sp-horizontal .sp-arrows {
-            margin-top: -30px;
         }
 
         .sp-arrows .sp-fade-arrows {
@@ -127,24 +127,32 @@
 
 @media screen and (max-width: 850px) {
     .Price {
-        .content-wrapper {
-            top: 4%;
-            right: 10%;
-            left: 10%;
-        }
-
         .background {
             display: none;
         }
 
-        .background2 {
-            display: block;
+        .content-wrapper {
+            position: relative;
+            top: initial;
+            right: initial;
+            bottom: initial;
+            left: initial;
+
+            .header {
+                position: relative;
+
+                top: 4%;
+
+                margin-bottom: 3vw;
+            }
         }
 
         .mobile-prices-wrapper {
+            width: 90vw;
+
             .mobile-price {
-                width: 29vw;
-                height: 29vw;
+                width: 40vw;
+                height: 40vw;
             }
         }
     }

@@ -1,10 +1,10 @@
 const path = require('path');
-
 const express = require('express');
 const compression = require('compression');
 const bodyParser = require('body-parser');
 const gmail = require('gmail-send');
 const pino = require('express-pino-logger')();
+const helmet = require('helmet');
 
 const config = require('./modules/config');
 
@@ -15,6 +15,13 @@ const email = {
     pass: 'woodstorysender228',
     to:   ['tavrida.media@mail.ru', 'trissenkov@gmail.com'],
 };
+
+if (config.https) {
+    app.use(helmet.hsts({
+        maxAge: 31536000,
+        preload: true
+    }));
+}
 
 app
     .use(compression())
@@ -78,7 +85,7 @@ app
         })
     })
 
-    .get('*', (req, res) => {
+    .get('/', (req, res) => {
         res.sendFile(path.join(__dirname, 'client/build/index.html'));
     });
 

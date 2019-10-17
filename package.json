@@ -24,7 +24,8 @@
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "express-pino-logger": "^4.0.0",
-    "gmail-send": "^1.8.10"
+    "gmail-send": "^1.8.10",
+    "helmet": "^3.21.1"
   },
   "devDependencies": {
     "cz-customizable": "^6.2.0"
