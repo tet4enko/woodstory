@@ -75,6 +75,10 @@ class App extends React.Component {
 
             touchMenuShow: false
         };
+
+        jQuery(window.document).one('scroll', () => {
+            this.refs.App.setAttribute('data-scrolled', 'yes')
+        });
     }
 
     setModalShow(value) {
@@ -134,9 +138,13 @@ class App extends React.Component {
         }, 100);
     }
 
+    goTop() {
+        jQuery('html, body').animate({ scrollTop: 0 }, 1000);
+    }
+
     render() {
         return (
-            <div className={`App ${this.state.touchMenuShow ? 'touch-menu-show' : ''}`}>
+            <div className={`App ${this.state.touchMenuShow ? 'touch-menu-show' : ''}`} ref="App">
                 <div className="touch-header" ref="touchHeader">
                     <FaBars className="ico" onClick={() => this.toggleTouchMenuShow()}/>
                     <div itemscope itemtype="http://schema.org/LocalBusiness">
@@ -154,6 +162,7 @@ class App extends React.Component {
                 <Feedback/>
                 <Footer/>
                 <div className="call-great" onClick={() => this.setModalShow(true)}></div>
+                <div className="go-top" onClick={this.goTop.bind(this)}></div>
                 <CallModal disabled={this.state.disabled} validated={this.state.modalValidated} show={this.state.modalShow} onCall={this.call.bind(this)} onHide={() => this.setModalShow(false)}/>
             </div>
         );

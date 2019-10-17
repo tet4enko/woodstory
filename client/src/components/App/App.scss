@@ -46,10 +46,16 @@ body {
         width: 100%;
     }
 
+    &:not([data-scrolled='yes']) {
+        .go-top {
+            display: none;
+        }
+    }
+
     .call-great {
         position: fixed;
         right: -329px;
-        bottom: 86px;
+        bottom: 123px;
 
         width: 400px;
         height: 75px;
@@ -78,6 +84,20 @@ body {
 
             font-size: 53px;
         }
+    }
+
+    .go-top {
+        position: fixed;
+        bottom: 123px;
+        left: 10px;
+
+        width: 75px;
+        height: 75px;
+
+        cursor: pointer;
+
+        background: url('./go_top.png');
+        background-size: cover;
     }
 }
 
@@ -142,7 +162,8 @@ body {
     .App {
         padding-top: 15vw;
 
-        .call-great {
+        .call-great,
+        .go-top {
             display: none;
         }
 
