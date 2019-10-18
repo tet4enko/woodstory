@@ -37,35 +37,35 @@ class Examples extends React.Component {
             <div className="Examples block">
                 <img className="background" src={background} />
                 <div className="slider-wrapper">
-                    <div className="header">Наши работы</div>
+                    <h2 className="header">Наши работы</h2>
                     <div class="slider-pro" id="my-slider">
                         <div class="sp-slides">
                             <div class="sp-slide">
-                                <img class="sp-image" src={pic1}/>
+                                <img class="sp-image" src={pic1} alt="Пример готовой картины 1"/>
                             </div>
 
                             <div class="sp-slide">
-                                <img class="sp-image" src={pic3}/>
+                                <img class="sp-image" src={pic3} alt="Пример готовой картины 2"/>
                             </div>
 
                             <div class="sp-slide">
-                                <img class="sp-image" src={pic4}/>
+                                <img class="sp-image" src={pic4} alt="Пример готовой картины 3"/>
                             </div>
 
                             <div class="sp-slide">
-                                <img class="sp-image" src={pic2}/>
+                                <img class="sp-image" src={pic2} alt="Пример готовой картины 4"/>
                             </div>
 
                             <div class="sp-slide">
-                                <img class="sp-image" src={pic5}/>
+                                <img class="sp-image" src={pic5} alt="Пример готовой картины 5"/>
                             </div>
 
                             <div class="sp-slide">
-                                <img class="sp-image" src={pic6}/>
+                                <img class="sp-image" src={pic6} alt="Пример готовой картины 6"/>
                             </div>
 
                             <div class="sp-slide">
-                                <img class="sp-image" src={pic7}/>
+                                <img class="sp-image" src={pic7} alt="Пример готовой картины 7"/>
                             </div>
                         </div>
                     </div>

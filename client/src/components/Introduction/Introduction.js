@@ -8,9 +8,9 @@ function Header() {
         <div className="Introduction block">
             <img className="background" src={background} />
             <div className="content-wrapper">
-                <div className="header">О нас</div>
+                <h2 className="header">О нас</h2>
                 <div className="content">
-                    <img className="balar" src={balar}></img>
+                    <img className="balar" src={balar} alt="Упакованная картина"></img>
                     <ul className="text">
                         <li className="item green">Более 3х лет на рынке</li>
                         <li className="item red">Налаженный процесс производства позволяет нам гарантировать минимальный срок изготовления</li>

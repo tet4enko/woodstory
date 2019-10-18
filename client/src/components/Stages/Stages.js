@@ -10,28 +10,29 @@ import stage5 from './pics/stage5.png';
 import arrowPic from './pics/arrow.png';
 
 function Stages() {
-    const stagePic = (img, index) => {
+    const stagePic = (img, index, label, alt) => {
         return <div className={`stage stage${index} green`}>
-            <img className="pic" src={img}></img>
+            <img className="pic" src={img} alt={alt}></img>
+            <h3 className="hidden">{label}</h3>
         </div>;
     };
-    const arrow = <img className="arrow" src={arrowPic}></img>;
+    const arrow = <img className="arrow" src={arrowPic} alt="Следующий этап работы"></img>;
 
     return (
         <div className="Stages block">
             <img className="background" src={background} />
             <div className="content-wrapper">
-                <div className="header">Этапы работы</div>
+                <h2 className="header">Этапы работы</h2>
                 <div className="content">
-                    {stagePic(stage1, 1, 'Дизайн', 'Подготовка вашего макета под печать')}
+                    {stagePic(stage1, 1, 'Дизайн', 'Этап один – подготовка дизайна')}
                     {arrow}
-                    {stagePic(stage2, 2, 'Производство', 'Обработка и грунтовка древесины')}
+                    {stagePic(stage2, 2, 'Производство', 'Этап два – производство')}
                     {arrow}
-                    {stagePic(stage3, 3, 'Печать', 'Нанесение изображения на поверхность изделия')}
+                    {stagePic(stage3, 3, 'Печать', 'Этап три – печать изображения на древесине')}
                     {arrow}
-                    {stagePic(stage4, 4, 'Упаковка', 'Упаковка готовой картины в подарочную бумагу')}
+                    {stagePic(stage4, 4, 'Упаковка', 'Этап четыре – упаковка картины')}
                     {arrow}
-                    {stagePic(stage5, 5, 'Доставка', 'Бесплатная доставка по Крыму')}
+                    {stagePic(stage5, 5, 'Доставка', 'Этап пять – доставка картины')}
                 </div>
             </div>
         </div>

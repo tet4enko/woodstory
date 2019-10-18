@@ -10,6 +10,18 @@ body {
 }
 
 .App {
+    h1 {
+        font-size: 12vw;
+    }
+
+    h2 {
+        font-size: 8vw;
+    }
+
+    h3 {
+        font-size: 6vw;
+    }
+
     .touch-header {
         display: none;
     }
@@ -18,8 +30,12 @@ body {
         margin-bottom: 40px;
 
         color: #f22c16;
+    }
 
-        font-size: 8vw;
+    .hidden {
+        position: absolute;
+        top: -99999px;
+        left: -99999px;
     }
 
     .red {

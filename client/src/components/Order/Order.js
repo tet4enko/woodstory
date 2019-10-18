@@ -73,7 +73,7 @@ class Order extends Component {
             <div className={`Order block ${this.state.submited ? 'submited' : ''}`}>
             <img className="background" src={background} />
             <div className="content-wrapper">
-                <div className="header">Заказать</div>
+                <h2 className="header">Заказать</h2>
 
                 <div className="submit-success-message green">
                     <div>Спасибо за заказ!</div>

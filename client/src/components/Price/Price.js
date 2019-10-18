@@ -70,50 +70,50 @@ class Price extends Component {
             <div className="Price block">
             <img className="background" src={background} />
             <div className="content-wrapper">
-                <div className="header">Цены</div>
+                <h2 className="header">Цены</h2>
                 <div className="mobile-prices-wrapper">
-                    <img className="mobile-price" src={mobilePrice1}></img>
-                    <img className="mobile-price" src={mobilePrice2}></img>
-                    <img className="mobile-price" src={mobilePrice3}></img>
-                    <img className="mobile-price" src={mobilePrice4}></img>
-                    <img className="mobile-price" src={mobilePrice5}></img>
-                    <img className="mobile-price" src={mobilePrice6}></img>
-                    <img className="mobile-price" src={mobilePrice7}></img>
+                    <img className="mobile-price" src={mobilePrice1} alt="Цена за картину размером 40x40"></img>
+                    <img className="mobile-price" src={mobilePrice2} alt="Цена за картину размером 60x40"></img>
+                    <img className="mobile-price" src={mobilePrice3} alt="Цена за картину размером 60x60"></img>
+                    <img className="mobile-price" src={mobilePrice4} alt="Цена за картину размером 90x60"></img>
+                    <img className="mobile-price" src={mobilePrice5} alt="Цена за картину размером 120x80"></img>
+                    <img className="mobile-price" src={mobilePrice6} alt="Цена за картину размером 120x100"></img>
+                    <img className="mobile-price" src={mobilePrice7} alt="Цена за картину размером 120x120"></img>
                 </div>
                 <div className="slider-wrapper">
                     <div class="slider-pro" id="price-slider">
                         <div class="sp-slides">
                             <div class="sp-slide">
-                                <img class="sp-image" src={size1}/>
+                                <img class="sp-image" src={size1} alt="Картина 40x40"/>
                             </div>
 
                             <div class="sp-slide">
-                                <img class="sp-image" src={size2}/>
+                                <img class="sp-image" src={size2} alt="Картина 60x40"/>
                             </div>
 
                             <div class="sp-slide">
-                                <img class="sp-image" src={size3}/>
+                                <img class="sp-image" src={size3} alt="Картина 60x60"/>
                             </div>
 
                             <div class="sp-slide">
-                                <img class="sp-image" src={size4}/>
+                                <img class="sp-image" src={size4} alt="Картина 90x60"/>
                             </div>
 
                             <div class="sp-slide">
-                                <img class="sp-image" src={size5}/>
+                                <img class="sp-image" src={size5} alt="Картина 120x80"/>
                             </div>
 
                             <div class="sp-slide">
-                                <img class="sp-image" src={size6}/>
+                                <img class="sp-image" src={size6} alt="Картина 120x100"/>
                             </div>
 
                             <div class="sp-slide">
-                                <img class="sp-image" src={size7}/>
+                                <img class="sp-image" src={size7} alt="Картина 120x120"/>
                             </div>
                         </div>
                     </div>
                     <div className="current-price">
-                        <img class={`current-price-img ${this.state.animatePrice ? 'animate' : ''}`} src={prices[`price${this.state.index}`]}/>
+                        <img class={`current-price-img ${this.state.animatePrice ? 'animate' : ''}`} src={prices[`price${this.state.index}`]} alt="Цена за картину"/>
                     </div>
                 </div>
             </div>

@@ -19,7 +19,8 @@ class Header extends React.Component {
     
         return (
             <header className="Header block">
-                <img className="background" src={background} />
+                <img className="background" src={background} alt="YouWoodStory – картины на дереве"/>
+                <h1 className="hidden">YouWoodStory – картины на дереве</h1>
                 <div className={`menu-wrapper ${props.touchMenuShow ? 'touch-show' : ''}`}>
                     <ol className="menu">
                         {button('РАБОТЫ', 'Examples')}
@@ -30,10 +31,10 @@ class Header extends React.Component {
                     </ol>
                     <div className="logos">
                         <a href="https://www.instagram.com/you.wood.story/" target="_blank">
-                            <img className="logo" src={woodLogo}/>
+                            <img className="logo" src={woodLogo} alt="YouWoodStory" />
                         </a>
                         <a href="https://www.instagram.com/tavridamedia/" target="_blank">
-                            <img className="logo" src={tavridaLogo}/>
+                            <img className="logo" src={tavridaLogo} alt="Таврида-Медиа – рекламное агенство"/>
                         </a>
                     </div>
                 </div>

@@ -27,7 +27,7 @@ class Feedback extends React.Component {
         const comment = (name, age, text, pic, side, href) => {
             return <div className={`comment ${side}`}>
                 <div className="top-line" href={href} target="_blank">
-                    <img className="avatar" src={pic} />
+                    <img className="avatar" src={pic} alt={`Отзыв ${name}`}/>
                     <div className="name green">{`${name}, ${age}`}</div>
                 </div>
                 <div className="description">{text}</div>
@@ -38,7 +38,7 @@ class Feedback extends React.Component {
             <div className={`Feedback block ${this.state.more ? 'more' : ''}`}>
                 <img className="background" src={background} />
                 <div className="content-wrapper">
-                    <div className="header">Отзывы</div>
+                    <h2 className="header">Отзывы</h2>
                     <div className="comments">
                         {comment('Александра', 21, 'Спасибо большое команде Wood Story, помогали мне с выбором размера картины. Очень понравилось качество изображения, подарочная упаковка. Спасибо большое!!!', alexandra, 'left', 'https://instagram.com/dmitry_tetchenko/')}
                         <div className="show-secondary red" onClick={this.viewMore.bind(this)}>Еще отзывы</div>
