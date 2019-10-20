@@ -15,6 +15,8 @@ import Feedback from './../Feedback/Feedback';
 import Order from './../Order/Order';
 import Stages from './../Stages/Stages';
 import Footer from './../Footer/Footer';
+import Blablabla from './../Blablabla/Blablabla';
+import Contacts from './../Contacts/Contacts';
 
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -183,9 +185,11 @@ class App extends React.Component {
                     </div>
                     <FaPhone className="ico" onClick={() => this.setModalShow(true)}/>
                 </div>
+                <Contacts/>
                 <Header onMenuItemClick={this.onMenuItemClick.bind(this)} touchMenuShow={this.state.touchMenuShow}/>
                 <Examples/>
                 <Stages/>
+                <Blablabla/>
                 <Price/>
                 <Order/>
                 <Introduction/>
