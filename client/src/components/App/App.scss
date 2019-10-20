@@ -84,11 +84,11 @@ body {
 
     .call-great {
         position: fixed;
-        right: -329px;
+        right: -250px;
         bottom: 123px;
 
-        width: 400px;
-        height: 75px;
+        width: 323px;
+        height: 64px;
 
         cursor: pointer;
 
@@ -97,7 +97,7 @@ body {
         transition-property: right;
 
         background: url('./call_great.png');
-        background-size: cover;
+        background-size: contain;
 
         &:hover {
             right: 0;
@@ -112,7 +112,7 @@ body {
 
             color: #fff;
 
-            font-size: 53px;
+            font-size: 45px;
         }
     }
 }
