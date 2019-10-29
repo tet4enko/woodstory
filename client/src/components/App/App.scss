@@ -256,3 +256,20 @@ body {
         }
     }
 }
+
+.ya-chat-widget .ya-chat-icon {
+    color: #597a00 !important;
+}
+
+.ya-chat-widget .ya-chat-button__text-container {
+    color: #597a00 !important;
+
+    font-family: gleb-font, sans-serif !important;
+
+    font-size: 24px !important;
+}
+
+.ya-chat-widget_theme_light.ya-chat-widget_desktop {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
