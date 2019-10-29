@@ -100,6 +100,28 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script type='text/javascript'>
+        (function () {
+            window['yandexChatWidgetCallback'] = function() {
+                try {
+                    window.yandexChatWidget = new Ya.ChatWidget({
+                        guid: '6f38a9bd-ef71-40e8-84dd-4fb6e324886f',
+                        buttonText: 'Напишите нам, мы в сети!',
+                        title: 'Чат с администрацией',
+                        theme: 'light',
+                        collapsedDesktop: 'never',
+                        collapsedTouch: 'always'
+                    });
+                } catch(e) { }
+            };
+            var n = document.getElementsByTagName('script')[0],
+                s = document.createElement('script');
+            s.async = true;
+            s.charset = 'UTF-8';
+            s.src = 'https://chat.s3.yandex.net/widget.js';
+            n.parentNode.insertBefore(s, n);
+        })();
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
